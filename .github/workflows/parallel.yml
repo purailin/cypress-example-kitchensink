@@ -115,12 +115,13 @@ jobs:
       - name: Cypress tests
         run: |
           npm start &
-          npx cypress run --record --parallel --group "Parallel 2x"
-        env:
-          # place your secret record key at
-          # https://github.com/cypress-io/cypress-example-kitchensink/settings/secrets
-          CYPRESS_RECORD_KEY: ${{ secrets.dashboardRecordKey }}
-          TERM: xterm
+          # npx cypress run --record --parallel --group "Parallel 2x"
+          npx cypress run --parallel --group "Parallel 2x"
+        # env:
+        #   # place your secret record key at
+        #   # https://github.com/cypress-io/cypress-example-kitchensink/settings/secrets
+        #   CYPRESS_RECORD_KEY: ${{ secrets.dashboardRecordKey }}
+        #   TERM: xterm
 
       # Save screenshots as test artifacts
       # https://github.com/actions/upload-artifact
@@ -174,12 +175,13 @@ jobs:
       - name: Cypress tests
         run: |
           npm start &
-          npx cypress run --record --parallel --group "Parallel 2x"
-        env:
-          # place your secret record key at
-          # https://github.com/cypress-io/cypress-example-kitchensink/settings/secrets
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          TERM: xterm
+          npx cypress run --parallel --group "Parallel 2x"
+          # npx cypress run --record --parallel --group "Parallel 2x"
+        # env:
+        #   # place your secret record key at
+        #   # https://github.com/cypress-io/cypress-example-kitchensink/settings/secrets
+        #   CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+        #   TERM: xterm
 
       # Save screenshots as test artifacts
       # https://github.com/actions/upload-artifact
