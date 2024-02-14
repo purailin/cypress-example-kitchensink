@@ -41,7 +41,7 @@ jobs:
         uses: cypress-io/github-action@v6
         timeout-minutes: 5
         with:
-          record: true
+          record: false
           parallel: true
           group: GH Action parallel
           start: npm start
